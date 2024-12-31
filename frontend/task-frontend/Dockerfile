@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # ===================================
-# Etapa 2: Servir con Apache
+# Etapa 2: Apache
 # ===================================
 FROM httpd:2.4
 
