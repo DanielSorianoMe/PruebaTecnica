@@ -16,7 +16,7 @@ COPY --from=builder /app/target/taskmanagement-0.0.1-SNAPSHOT.jar app.jar
 
 # Puerto de Spring Boot
 EXPOSE 8085
-# Variable de entorno opcional (ej. para cambiar puerto, etc.)
+
 ENV SPRING_PROFILES_ACTIVE=prod
 
 ENTRYPOINT ["java","-jar","app.jar"]
