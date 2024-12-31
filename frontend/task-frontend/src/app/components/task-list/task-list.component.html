@@ -1,0 +1,16 @@
+<h2>Lista de Tareas</h2>
+
+<!-- Mensaje de éxito/error -->
+<div *ngIf="message" [ngClass]="{ error: isError, success: !isError }">
+  {{ message }}
+</div>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    <strong>{{ task.title }}</strong> - {{ task.description }}
+    <button (click)="deleteTask(task.id)">Eliminar</button>
+  </li>
+</ul>
+
+<!-- Botón para ir al formulario de creación -->
+<button routerLink="/tasks/new">Agregar Nueva Tarea</button>
